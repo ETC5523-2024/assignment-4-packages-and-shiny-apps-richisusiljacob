@@ -1,0 +1,57 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# AutoPrice
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of AutoPrice is to provide an easy-to-use tool for analyzing vehicle price trends across different years. This package helps users identify how vehicle prices have changed from 2023 to 2025, including trends by make, model, and other factors. It is designed to support data-driven decision-making in the automotive industry by providing insights into price fluctuations.
+
+The goal of AutoPrice is to ...
+
+## Installation
+
+You can install the development version of AutoPrice from [GitHub](https://github.com/) with:
+
+```{r}
+remotes::install_github("richisusiljacob/AutoPrice")
+
+```
+
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(AutoPrice)
+library(ggplot2)
+library(tidyverse)
+
+```
+```{r}
+# Load the vehicle price data
+vehicles_clean <- AutoPrice::vehicles_clean
+
+# Summary statistics of the vehicle prices
+summary(vehicles_clean$price)
+```
+
+```{r}
+ggplot(vehicles_clean, aes(x = year, y = price)) +
+  geom_point()
+```
+
