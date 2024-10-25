@@ -1,11 +1,23 @@
 
-This README includes: - **Package Overview**: A description of
-`AutoPrice` and its main features. - **Installation Instructions**: How
-to install the package from GitHub. - **Example Usage**: Loading the
-dataset, conducting basic analysis, and generating summary statistics. -
-**Shiny App Instructions**: How to start and use the Shiny app. -
-**Contributing and License**: Information on contributing to the package
-and licensing.
+## Documentation
+
+The full documentation for the `AutoPrice` package is available
+[here](https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-richisusiljacob/).
+
+This README includes: -
+
+- **Package Overview**: A description of `AutoPrice` and its main
+  features.
+
+- **Installation Instructions**: How to install the package from GitHub.
+
+- **Example Usage**: Loading the dataset, conducting basic analysis, and
+  generating summary statistics.
+
+- **Shiny App Instructions**: How to start and use the Shiny app.
+
+- **Contributing and License**: Information on contributing to the
+  package and licensing.
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
