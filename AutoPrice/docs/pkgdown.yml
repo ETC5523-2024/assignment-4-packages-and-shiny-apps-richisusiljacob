@@ -1,6 +1,9 @@
-pandoc: 3.1.11
+pandoc: '3.2'
 pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   AutoPrice: AutoPrice.html
-last_built: 2024-10-25T11:14Z
+last_built: 2024-10-25T20:46Z
+urls:
+  reference: https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-richisusiljacob/reference
+  article: https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-richisusiljacob/articles

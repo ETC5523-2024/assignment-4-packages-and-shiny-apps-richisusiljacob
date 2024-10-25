@@ -38,7 +38,7 @@ Data Analysis Tools: Functions for analyzing price trends by production year, ve
 
 You can install the development version of AutoPrice from [GitHub](https://github.com/) with:
 
-```{r}
+```{r eval=FALSE}
 install.packages("remotes")
 remotes::install_github("richisusiljacob/AutoPrice")
 ```
@@ -90,7 +90,7 @@ The AutoPrice package includes a Shiny app for interactive exploration of the da
 
 To launch the Shiny app, use the following command:
 
-```{r}
+```{r eval=FALSE}
 AutoPrice::run_app()
 
 ```

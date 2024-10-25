@@ -2,7 +2,4 @@
 
 export(VehiclePriceApp)
 export(VehiclePriceAppUI)
-export(prepare_autoprice_dataset)
 export(server)
-importFrom(dplyr,filter)
-importFrom(readr,read_csv)

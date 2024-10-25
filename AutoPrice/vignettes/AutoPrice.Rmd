@@ -18,3 +18,45 @@ knitr::opts_chunk$set(
 library(tidyverse)
 library(AutoPrice)
 ```
+
+<img src="../man/figures/logo.png" alt="AutoPrice logo" width="150" style="float:right; margin-left:15px; border: none;" />
+The goal of AutoPrice is to provide tools for analyzing vehicle price trends across production years, vehicle makes, models, and other relevant attributes. The package includes functions to explore and clean datasets, a pkgdown site for reference, and an interactive Shiny app.
+
+# Installation
+You can install the development version of AutoPrice from GitHub with:
+
+```{r eval=FALSE}
+# Install the remotes package if needed
+# install.packages("remotes")
+remotes::install_github("richisusiljacob/AutoPrice")
+
+```
+
+```{r}
+
+library(AutoPrice)
+
+```
+
+# Data Overview
+The main dataset provided with the AutoPrice package, vehicles_clean, contains cleaned vehicle data with key information such as vehicle prices, years, makes, and more.
+
+```{r eval=FALSE}
+data("vehicles_clean")
+head(vehicles_clean)
+
+```
+
+# Summary of the Dataset
+Below is a summary of the vehicles_clean dataset:
+
+```{r eval=FALSE}
+summary(vehicles_clean)
+```
+
+# Shiny App
+The AutoPrice package also includes a Shiny app for interactive exploration of vehicle data. The app allows users to filter and visualize vehicle prices based on production year, make, transmission type, and body type.
+
+```{r eval=FALSE}
+AutoPrice::run_app()
+```
