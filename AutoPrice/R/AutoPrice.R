@@ -1,8 +1,9 @@
 #' vehicles_clean Dataset
 #'
-#' A cleaned dataset of vehicle data containing information on vehicle prices, production year, and various technical attributes. This dataset includes vehicles from 2023 to 2025 and is used to analyze vehicle pricing trends.
+#' A cleaned dataset of vehicle data containing information on vehicle prices, production year, and various technical attributes.
+#' This dataset includes vehicles from 2023 to 2025 and is used to analyze vehicle pricing trends.
 #'
-#' @format A data frame with `n` rows and `m` variables:
+#' @format A data frame with n rows and the following m variables:
 #' \describe{
 #'   \item{year}{Numeric. The production year of the vehicle (2023-2025).}
 #'   \item{price}{Numeric. The price of the vehicle in USD.}
@@ -18,19 +19,20 @@
 #' @examples
 #' data(vehicles_clean)
 #' head(vehicles_clean)
-"vehicles_clean"
-
-
+#' @name vehicles_clean
+NULL
 #' Prepare AutoPrice Dataset
 #'
-#' This function prepares the `AutoPrice` dataset by reading in raw vehicle data from a CSV file, removing missing values, and filtering out price outliers. The cleaned dataset is stored in the `vehicles_clean` object.
+#' This function prepares the `AutoPrice` dataset by reading in raw vehicle data from a CSV file,
+#' cleaning it by removing missing values, and filtering out price outliers.
 #'
-#' @param file_path The file path to the raw dataset CSV file.
-#' @param overwrite Logical. Whether to overwrite the existing `vehicles_clean` dataset.
+#' @param file_path Character. The file path to the raw dataset CSV file.
+#' @param overwrite Logical. Whether to overwrite the existing `vehicles_clean` dataset in the package.
 #'
-#' @return A cleaned dataset of vehicle data (`vehicles_clean`) is saved in the package’s data folder.
+#' @return A cleaned dataset of vehicle data (`vehicles_clean`) is saved in the package's data folder.
 #'
-#' @details The cleaning process involves filtering out rows where the year or price is missing, and removing price outliers using the 1st and 99th quantiles.
+#' @details The cleaning process involves filtering out rows where the year or price is missing,
+#' and removing price outliers using the 1st and 99th quantiles of the price distribution.
 #'
 #' @examples
 #' prepare_autoprice_dataset("data-raw/vehicles_dataset.csv", overwrite = TRUE)
@@ -47,4 +49,3 @@ prepare_autoprice_dataset <- function(file_path, overwrite = TRUE) {
 
   usethis::use_data(vehicles_clean, overwrite = overwrite)
 }
-

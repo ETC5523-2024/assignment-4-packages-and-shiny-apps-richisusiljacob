@@ -7,18 +7,20 @@
 prepare_autoprice_dataset(file_path, overwrite = TRUE)
 }
 \arguments{
-\item{file_path}{The file path to the raw dataset CSV file.}
+\item{file_path}{Character. The file path to the raw dataset CSV file.}
 
-\item{overwrite}{Logical. Whether to overwrite the existing \code{vehicles_clean} dataset.}
+\item{overwrite}{Logical. Whether to overwrite the existing \code{vehicles_clean} dataset in the package.}
 }
 \value{
-A cleaned dataset of vehicle data (\code{vehicles_clean}) is saved in the package’s data folder.
+A cleaned dataset of vehicle data (\code{vehicles_clean}) is saved in the package's data folder.
 }
 \description{
-This function prepares the \code{AutoPrice} dataset by reading in raw vehicle data from a CSV file, removing missing values, and filtering out price outliers. The cleaned dataset is stored in the \code{vehicles_clean} object.
+This function prepares the \code{AutoPrice} dataset by reading in raw vehicle data from a CSV file,
+cleaning it by removing missing values, and filtering out price outliers.
 }
 \details{
-The cleaning process involves filtering out rows where the year or price is missing, and removing price outliers using the 1st and 99th quantiles.
+The cleaning process involves filtering out rows where the year or price is missing,
+and removing price outliers using the 1st and 99th quantiles of the price distribution.
 }
 \examples{
 prepare_autoprice_dataset("data-raw/vehicles_dataset.csv", overwrite = TRUE)
