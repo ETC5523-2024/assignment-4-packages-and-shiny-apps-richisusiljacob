@@ -32,7 +32,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# AutoPrice
+## AutoPrice
 
 <!-- badges: start -->
 
@@ -41,7 +41,7 @@ knitr::opts_chunk$set(
 The AutoPrice package provides tools for analyzing vehicle price trends across production years, vehicle makes, models, and more.
 This package is designed to support data-driven insights in the automotive industry, focusing on price changes from 2023 to 2025 to help users understand the factors driving price fluctuations.
 
-# Key Features
+## Key Features
 
 Dataset Access: A cleaned dataset (vehicles_clean) with over 9,000 vehicles, covering essential details like price, year, make, model, fuel type, mileage, transmission, and body type.
 Shiny App: An interactive Shiny app that allows users to explore vehicle price distributions, filter data by various attributes, and download the filtered results.
@@ -56,14 +56,14 @@ install.packages("remotes")
 remotes::install_github("richisusiljacob/AutoPrice")
 ```
 
-# Getting Started
+## Articles
 
 ## Loading the Dataset
 
 The primary dataset, vehicles_clean, can be accessed directly from the package.
 This dataset includes vehicles manufactured from 2023 to 2025, with fields such as price, year, make, model, and fuel.
 
-```{r}
+```{r eval=FALSE}
 library(AutoPrice)
 
 # Load the vehicle price data
@@ -87,7 +87,7 @@ ggplot(vehicles_clean, aes(x = year, y = price)) +
 
 ```
 
-# Summary Statistics
+## Summary Statistics
 
 You can also view basic summary statistics of the vehicle prices:
 
@@ -95,7 +95,7 @@ You can also view basic summary statistics of the vehicle prices:
 summary(vehicles_clean$price)
 ```
 
-# Shiny App
+## Shiny App
 
 The AutoPrice package includes a Shiny app for interactive exploration of the dataset.
 This app provides tools for filtering vehicle data by year, price range, make, transmission type, and body type.
@@ -116,11 +116,11 @@ Filter data by year (2023, 2024, 2025), price range, make, transmission, and bod
 View a histogram of vehicle prices based on the selected filters.
 Download the filtered dataset for further analysis.
 
-# Contributing
+## Contributing
 
 We welcome contributions to enhance the functionality of AutoPrice.
 If you'd like to contribute, please submit a pull request or open an issue on GitHub.
 
-# License
+## License
 
 The AutoPrice package is licensed under the MIT License.

@@ -1,6 +1,6 @@
 Package: AutoPrice
 Title: Vehicle Price Analysis Package
-Version: 0.0.0.9000
+Version: 1.0
 Authors@R: 
     person("Richi", "Jacob", , "rsus0004@student.monash.edu", role = c("aut", "cre"))
 Description: The AutoPrice package provides tools to analyze vehicle price trends across different production years. It leverages a dataset containing over 9,000 vehicles from 2023 to 2025, allowing users to explore price variations, identify market trends, and generate insights based on factors like year, make, and model.
@@ -12,6 +12,7 @@ Depends:
     R (>= 2.10)
 LazyData: true
 Imports: tidyverse,ggplot2
+URL: https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-richisusiljacob/
 Suggests: 
     knitr,
     rmarkdown
