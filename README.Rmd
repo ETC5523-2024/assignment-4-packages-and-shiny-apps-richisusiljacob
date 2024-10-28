@@ -112,7 +112,7 @@ To launch the Shiny app, use the following command:
 
 ```{r eval=FALSE}
 library(AutoPrice)
-VehiclePriceApp()
+AutoPrice::load_shiny_app()
 
 ```
 

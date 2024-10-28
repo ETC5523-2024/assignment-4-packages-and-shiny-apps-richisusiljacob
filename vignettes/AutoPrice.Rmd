@@ -88,7 +88,7 @@ The `AutoPrice` package includes a Shiny app that provides an interactive way to
 
 ```{r eval=FALSE}
 library(AutoPrice)
-VehiclePriceApp()
+AutoPrice::load_shiny_app()
 ```
 
 This app allows you to:

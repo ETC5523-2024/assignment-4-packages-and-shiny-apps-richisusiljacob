@@ -115,7 +115,7 @@ To launch the Shiny app, use the following command:
 
 ``` r
 library(AutoPrice)
-VehiclePriceApp()
+load_shiny_app()
 ```
 
 Once the app is running, We can:
