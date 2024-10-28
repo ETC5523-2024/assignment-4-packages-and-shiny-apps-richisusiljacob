@@ -53,7 +53,7 @@ You can install the development version of AutoPrice from [GitHub](https://githu
 # Install devtools if you haven't already
 install.packages("devtools")
 
-# Install ozstockpicker from GitHub
+# Install from GitHub
 devtools::install_github("ETC5523-2024/assignment-4-packages-and-shiny-apps-richisusiljacob")
 ```
 
