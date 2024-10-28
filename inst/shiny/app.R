@@ -4,22 +4,6 @@
 #' based on year, price range, make, transmission type, and body type. The app visualizes
 #' the price distribution with a histogram and provides an option to download the filtered data.
 #'
-#' @section Main Features:
-#' - Users can filter vehicle data based on the production year (2023–2025), price range, make, transmission, and body type.
-#' - A dynamic histogram visualizes the price distribution of vehicles based on the selected filters.
-#' - The filtered dataset can be downloaded as a CSV file.
-#'
-#' @import shiny
-#' @import ggplot2
-#' @import dplyr
-#'
-#' @examples
-#' # Run the Shiny app
-#' shinyApp(ui = ui, server = server)
-#'
-#' @name VehiclePriceAnalysisApp
-NULL
-
 #' User Interface (UI) for the Shiny App
 #'
 #' The UI defines the layout and appearance of the Shiny app. It includes selectors for year, price range,
@@ -34,8 +18,19 @@ NULL
 #' - **Download Button**: Download the filtered data as a CSV file.
 #'
 #' @return The UI layout for the Shiny app.
-#'
+#' @name VehiclePriceAppUI
 #' @export
+
+
+# Load necessary libraries
+library(shiny)
+library(ggplot2)
+library(dplyr)
+
+# Load the cleaned dataset from your package
+data("vehicles_clean", package = "AutoPrice")
+
+# Define UI for the application
 ui <- fluidPage(
   # Add some custom styling
   tags$head(
@@ -109,6 +104,7 @@ ui <- fluidPage(
     )
   )
 )
+
 #' Server Logic for the Shiny App
 #'
 #' The server logic manages the interactive behavior of the Shiny app. It filters the dataset
@@ -119,8 +115,10 @@ ui <- fluidPage(
 #' @param output The output displayed in the app (e.g., plot and download handler).
 #'
 #' @return The reactive plot and download handler for the filtered data.
-#'
+#' @name VehiclePriceAppServer
 #' @export
+
+# Define server logic
 server <- function(input, output) {
 
   # Reactive data filtering based on inputs
@@ -153,6 +151,8 @@ server <- function(input, output) {
     }
   )
 }
+
+
 #' Run the Shiny Application
 #'
 #' This function runs the Shiny application for exploring vehicle prices from 2023 to 2025. It provides
@@ -161,6 +161,8 @@ server <- function(input, output) {
 #'
 #' @examples
 #' shinyApp(ui = ui, server = server)
-#'
+#' @name VehiclePriceApp
 #' @export
+
+# Run the application
 shinyApp(ui = ui, server = server)

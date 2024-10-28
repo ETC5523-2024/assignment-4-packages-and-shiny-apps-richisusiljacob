@@ -62,7 +62,6 @@
 <div class="section level2">
 <h2 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
 </h2>
-<p>The full documentation for the <code>AutoPrice</code> package is available <a href="https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-richisusiljacob/" class="external-link">here</a>.</p>
 <p>This README includes: -</p>
 <ul>
 <li><p><strong>Package Overview</strong>: A description of <code>AutoPrice</code> and its main features.</p></li>
@@ -73,17 +72,18 @@
 </ul>
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 </div>
-<div class="section level1">
-<div class="page-header"><h1 id="autoprice">AutoPrice<a class="anchor" aria-label="anchor" href="#autoprice"></a>
-</h1></div>
+<div class="section level2">
+<h2 id="autoprice">AutoPrice<a class="anchor" aria-label="anchor" href="#autoprice"></a>
+</h2>
 <!-- badges: start -->
 <!-- badges: end -->
 <p>The AutoPrice package provides tools for analyzing vehicle price trends across production years, vehicle makes, models, and more. This package is designed to support data-driven insights in the automotive industry, focusing on price changes from 2023 to 2025 to help users understand the factors driving price fluctuations.</p>
 </div>
-<div class="section level1">
-<h1 id="key-features">Key Features<a class="anchor" aria-label="anchor" href="#key-features"></a>
-</h1>
+<div class="section level2">
+<h2 id="key-features">Key Features<a class="anchor" aria-label="anchor" href="#key-features"></a>
+</h2>
 <p>Dataset Access: A cleaned dataset (vehicles_clean) with over 9,000 vehicles, covering essential details like price, year, make, model, fuel type, mileage, transmission, and body type. Shiny App: An interactive Shiny app that allows users to explore vehicle price distributions, filter data by various attributes, and download the filtered results. Data Analysis Tools: Functions for analyzing price trends by production year, vehicle make, and other attributes.</p>
+</div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -92,10 +92,10 @@
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"richisusiljacob/AutoPrice"</span><span class="op">)</span></span></code></pre></div>
 </div>
+<div class="section level2">
+<h2 id="getting-started">Getting Started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
+</h2>
 </div>
-<div class="section level1">
-<h1 id="getting-started">Getting Started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
-</h1>
 <div class="section level2">
 <h2 id="loading-the-dataset">Loading the Dataset<a class="anchor" aria-label="anchor" href="#loading-the-dataset"></a>
 </h2>
@@ -164,39 +164,45 @@
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-4-1.png" width="100%"></p>
 </div>
-</div>
-<div class="section level1">
-<h1 id="summary-statistics">Summary Statistics<a class="anchor" aria-label="anchor" href="#summary-statistics"></a>
-</h1>
+<div class="section level2">
+<h2 id="summary-statistics">Summary Statistics<a class="anchor" aria-label="anchor" href="#summary-statistics"></a>
+</h2>
 <p>You can also view basic summary statistics of the vehicle prices:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">vehicles_clean</span><span class="op">$</span><span class="va">price</span><span class="op">)</span></span>
 <span><span class="co">#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span></span>
 <span><span class="co">#&gt;   21637   36891   47165   49734   58750  110150</span></span></code></pre></div>
 </div>
-<div class="section level1">
-<h1 id="shiny-app">Shiny App<a class="anchor" aria-label="anchor" href="#shiny-app"></a>
-</h1>
+<div class="section level2">
+<h2 id="shiny-app">Shiny App<a class="anchor" aria-label="anchor" href="#shiny-app"></a>
+</h2>
 <p>The AutoPrice package includes a Shiny app for interactive exploration of the dataset. This app provides tools for filtering vehicle data by year, price range, make, transmission type, and body type. The app generates a histogram showing the distribution of prices based on these filters, and users can download the filtered data.</p>
+</div>
 <div class="section level2">
 <h2 id="running-the-shiny-app">Running the Shiny App<a class="anchor" aria-label="anchor" href="#running-the-shiny-app"></a>
 </h2>
+<p>The <code>AutoPrice</code> package includes a Shiny app for interactive exploration of the dataset. This app provides tools for filtering vehicle data by year, price range, make, transmission type, and body type. The app generates a histogram showing the distribution of prices based on these filters, and users can download the filtered data.</p>
 <p>To launch the Shiny app, use the following command:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">AutoPrice</span><span class="fu">::</span><span class="fu">run_app</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">AutoPrice</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/VehiclePriceApp.html">VehiclePriceApp</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>Once the app is running, We can:</p>
-<p>Filter data by year (2023, 2024, 2025), price range, make, transmission, and body type. View a histogram of vehicle prices based on the selected filters. Download the filtered dataset for further analysis.</p>
+<ul>
+<li><p>Filter data by year (2023, 2024, 2025), price range, make, transmission, and body type.</p></li>
+<li><p>View a histogram of vehicle prices based on the selected filters.</p></li>
+<li><p>Download the filtered dataset for further analysis.</p></li>
+</ul>
 </div>
-</div>
-<div class="section level1">
-<h1 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
-</h1>
+<div class="section level2">
+<h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
+</h2>
 <p>We welcome contributions to enhance the functionality of AutoPrice. If you’d like to contribute, please submit a pull request or open an issue on GitHub.</p>
 </div>
-<div class="section level1">
-<h1 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
-</h1>
+<div class="section level2">
+<h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
+</h2>
 <p>The AutoPrice package is licensed under the MIT License.</p>
+<p><strong><em>The full documentation for the <code>AutoPrice</code> package is available <a href="https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-richisusiljacob/" class="external-link">here</a>.</em></strong></p>
 </div>
 
   </div>

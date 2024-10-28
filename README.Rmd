@@ -7,8 +7,6 @@ editor_options:
 
 ## Documentation
 
-The full documentation for the `AutoPrice` package is available [here](https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-richisusiljacob/).
-
 This README includes: -
 
 -   **Package Overview**: A description of `AutoPrice` and its main features.
@@ -52,23 +50,26 @@ Data Analysis Tools: Functions for analyzing price trends by production year, ve
 You can install the development version of AutoPrice from [GitHub](https://github.com/) with:
 
 ```{r eval=FALSE}
-install.packages("remotes")
-remotes::install_github("richisusiljacob/AutoPrice")
+# Install devtools if you haven't already
+install.packages("devtools")
+
+# Install ozstockpicker from GitHub
+devtools::install_github("ETC5523-2024/assignment-4-packages-and-shiny-apps-richisusiljacob")
 ```
 
-## Articles
+## Getting Started
 
 ## Loading the Dataset
 
 The primary dataset, vehicles_clean, can be accessed directly from the package.
 This dataset includes vehicles manufactured from 2023 to 2025, with fields such as price, year, make, model, and fuel.
 
-```{r eval=FALSE}
+```{r}
 library(AutoPrice)
 
 # Load the vehicle price data
 data("vehicles_clean")
-head(vehicles_clean)
+
 ```
 
 ## Basic Analysis Example
@@ -103,18 +104,25 @@ The app generates a histogram showing the distribution of prices based on these 
 
 ## Running the Shiny App
 
+The `AutoPrice` package includes a Shiny app for interactive exploration of the dataset.
+This app provides tools for filtering vehicle data by year, price range, make, transmission type, and body type.
+The app generates a histogram showing the distribution of prices based on these filters, and users can download the filtered data.
+
 To launch the Shiny app, use the following command:
 
 ```{r eval=FALSE}
-AutoPrice::run_app()
+library(AutoPrice)
+VehiclePriceApp()
 
 ```
 
 Once the app is running, We can:
 
-Filter data by year (2023, 2024, 2025), price range, make, transmission, and body type.
-View a histogram of vehicle prices based on the selected filters.
-Download the filtered dataset for further analysis.
+-   Filter data by year (2023, 2024, 2025), price range, make, transmission, and body type.
+
+-   View a histogram of vehicle prices based on the selected filters.
+
+-   Download the filtered dataset for further analysis.
 
 ## Contributing
 
@@ -124,3 +132,5 @@ If you'd like to contribute, please submit a pull request or open an issue on Gi
 ## License
 
 The AutoPrice package is licensed under the MIT License.
+
+***The full documentation for the `AutoPrice` package is available [here](https://etc5523-2024.github.io/assignment-4-packages-and-shiny-apps-richisusiljacob/).***

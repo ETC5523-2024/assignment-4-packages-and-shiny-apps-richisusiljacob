@@ -84,11 +84,20 @@ kableExtra::kable(avg_price_by_transmission) %>%
 
 ## Using the Shiny App for Interactive Exploration
 
-The AutoPrice package includes a Shiny app that provides an interactive way to explore vehicle prices. You can launch the app with the following command:
+The `AutoPrice` package includes a Shiny app that provides an interactive way to explore vehicle prices. You can launch the app with the following command:
+
+```{r eval=FALSE}
+library(AutoPrice)
+VehiclePriceApp()
+```
 
 This app allows you to:
 
-Filter vehicle prices by year, make, transmission type, and body type. View dynamic plots of price distributions. Download filtered data for further analysis.
+-   Filter vehicle prices by year, make, transmission type, and body type.
+
+-   View dynamic plots of price distributions.
+
+-   Download filtered data for further analysis.
 
 ## Conclusion
 
